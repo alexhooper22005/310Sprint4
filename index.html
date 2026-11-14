@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A playful place to keep track of your daily water."
+    />
+    <title>Water Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#overview" aria-label="Water Tracker home">
+        <span class="brand-mark" aria-hidden="true">W</span>
+        <span>water<span class="brand-light">tracker</span></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a class="nav-link" href="#overview">Overview</a>
+        <a class="nav-link" href="#comparisons">Comparisons</a>
+        <a class="profile-mark" href="#overview" aria-label="Your profile">A</a>
+      </nav>
+    </header>
+
+    <main id="overview">
+      <section class="welcome" aria-labelledby="welcome-title">
+        <div>
+          <p class="eyebrow">YOUR DAILY REFRESH</p>
+          <h1 id="welcome-title">Make every sip <span>add up.</span></h1>
+          <p class="welcome-copy">
+            A little more water, a lot more perspective.
+          </p>
+        </div>
+        <div class="sun-mark" aria-hidden="true">✳</div>
+      </section>
+
+      <section class="dashboard" aria-label="Today's water dashboard">
+        <article class="hydration-card" aria-labelledby="hydration-title">
+          <div class="card-heading">
+            <div>
+              <p class="eyebrow">YOUR PROGRESS</p>
+              <h2 id="hydration-title">Today's hydration</h2>
+            </div>
+            <span class="date-pill">TODAY</span>
+          </div>
+
+          <div class="hydration-content">
+            <div class="water-illustration" aria-hidden="true">
+              <div class="glass">
+                <div class="glass-water"></div>
+              </div>
+              <span class="sparkle sparkle-one">✳</span>
+              <span class="sparkle sparkle-two">·</span>
+            </div>
+            <div class="hydration-total">
+              <p class="total-number" id="water-total">0</p>
+              <p class="total-label">drinks logged</p>
+              <p class="total-label" id="water-ml" aria-live="polite">0 ml estimated</p>
+              <div class="water-actions">
+                <button class="add-sip-button" type="button">Add a sip (~16 mL)</button>
+                <button class="reset-water-button" type="button">Reset</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <span class="status-dot" aria-hidden="true"></span>
+            <p>Your daily journey starts with a sip.</p>
+          </div>
+        </article>
+
+        <article
+          class="comparison-card"
+          id="comparisons"
+          aria-labelledby="comparison-title"
+        >
+          <div class="card-heading">
+            <div>
+              <p class="eyebrow">A FRESH PERSPECTIVE</p>
+              <h2 id="comparison-title">Water comparisons</h2>
+            </div>
+            <span class="comparison-icon" aria-hidden="true">↗</span>
+          </div>
+
+          <div class="comparison-empty">
+            <div class="object-icons" aria-hidden="true">
+              <span>🏀</span>
+              <span>🥄</span>
+            </div>
+            <p class="empty-title">Your water, in unexpected objects.</p>
+            <p class="empty-copy" id="object-comparison" aria-live="polite">
+              About 0 tablespoons
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <footer class="page-footer">
+        <p>Small sips. Surprising scale.</p>
+        <span aria-hidden="true">✳</span>
+      </footer>
+    </main>
+    <script type="module" src="./src/ui/main.mjs"></script>
+  </body>
+</html>
